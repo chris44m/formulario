@@ -1,0 +1,30 @@
+﻿@model practica1.Models.Venta
+@{
+    ViewData["Title"] = "Venta";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <form asp-controller="Venta" asp-action="Vender">
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label">Nombre del producto</label>
+                    <input asp-for="Nombre" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Cantidad" class="form-label">Cantidad</label>
+                    <input asp-for="Cantidad" type="number" class="form-control" placeholder="Ingrese la cantidad">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Precio" class="form-label">Precio</label>
+                    <input asp-for="Precio" type="number" class="form-control" placeholder="Ingrese el precio">
+                </div>
+                <button type="submit" class="btn btn-success">Vender</button>
+            </form>
+            <h1>@ViewData["Message"]</h1>
+        </div>
+    </div>
+</div>
